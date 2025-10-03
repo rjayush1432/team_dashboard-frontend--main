@@ -1,0 +1,35 @@
+/* App.css */
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b84c4, #ce567e);
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+
+/* Add some padding/margin for the metrics panel */
+.metrics-panel {
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+/* Make inputs, selects, and buttons full width on mobile */
+@media (max-width: 768px) {
+  input, select, button {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import Metrics from "./components/Metrics";
+import "./App.css";  // Import the CSS here
 
-const API_BASE = import.meta.env.VITE_API_URL; // Load backend URL from .env
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -48,28 +49,26 @@ const App = () => {
   };
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      background: "linear-gradient(135deg, #e3f2fd, #fce4ec)",
-      padding: "30px",
-      fontFamily: "Arial, sans-serif",
-    }}>
+    <div>
       <h1 style={{
         textAlign: "center",
         marginBottom: "30px",
         fontSize: "32px",
         fontWeight: "bold",
         color: "#1976d2",
+        textShadow: "0 0 10px #00f0ff",
+        background: "linear-gradient(90deg, #ff8a00, #e52e71)",
       }}>
         🚀 Team Dashboard
       </h1>
 
-      <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "25px" }}>
+      <div className="dashboard-container">
         <div>
           <TaskForm addTask={addTask} />
           <TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
         </div>
-        <div>
+
+        <div className="metrics-panel">
           <Metrics tasks={tasks} />
         </div>
       </div>
