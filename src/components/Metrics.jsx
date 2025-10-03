@@ -42,7 +42,7 @@ const Metrics = ({ tasks }) => {
           fontSize: "22px",
           fontWeight: "bold",
           marginBottom: "25px",
-          color: "#00fff0",
+          color: "#000000ff",
           textShadow: "0 0 6px #00fff0",
         }}
       >
